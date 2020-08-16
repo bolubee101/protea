@@ -98,3 +98,5 @@ router.get("/alljobs",(req,res)=>{
   })
 
 })
+
+module.exports=router;
