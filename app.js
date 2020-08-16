@@ -46,6 +46,10 @@ app.get("/", (req, res) => {
 const users=require("./routes/users");
 app.use("/api/users",users);
 
+// bringing the jobs routes
+const users=require("./routes/jobs");
+app.use("/api/jobs",jobs);
+
 app.listen(PORT, () => {
   console.log(`server running on port ${PORT}`);
 });
