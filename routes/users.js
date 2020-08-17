@@ -7,14 +7,8 @@ const User = require("../models/users");
 const database = require("../config/database");
 
 router.post("/register", (req, res) => {
-  let newUser = new User({
-    lastname: req.body.lastname,
-    firstname: req.body.firstname,
-    username: req.body.username,
-    email: req.body.email,
-    contact: req.body.contact,
-    password: req.body.password,
-  });
+  // This is shorter and works is the input names correspond to your target names
+  let newUser = new User(req.body);
   User.addUser(newUser, (err, user) => {
     if (err) {
       let message = "";
