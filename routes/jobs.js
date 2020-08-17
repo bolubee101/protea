@@ -8,18 +8,7 @@ const Job = require("../models/Job");
 const database = require("../config/database");
 
 router.post("/addJob", (req, res) => {
-  let newJob = new Job({
-    creator_username: req.body.creator_username,
-    description: req.body.description,
-    location: req.body.location,
-    pay: req.body.maxduration,
-    tags: req.body.tags || "",
-    status: req.body.status || "",
-    job_location: req.body.job_location,
-    bidders: req.body.bidders || "",
-    assigned: req.body.assigned || "",
-    unit: req.body.unit,
-  });
+  let newJob = new Job(req.body);
   Job.addJob(newJob, (err, user) => {
     if (err) {
       let message = "";
