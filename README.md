@@ -1,13 +1,15 @@
 # protea
-Tentative Backend for protea, a freelancer platform with opportunities for internship
 
+Tentative Backend for protea, a freelancer platform with opportunities for internship
 
 ## Endpoints
 
 1. POST /api/users/register - Registers a new user into the collection
-The schema of the expected data is
+   The schema of the expected data is
+
 ```
-{firstname: {
+{
+    firstname: {
     type: String,
     required: true
   },
@@ -46,5 +48,5 @@ The schema of the expected data is
   skills: [SkillSchema],
   employer_rating: Number,
   intern_rating: Number
-};
+}
 ```
